@@ -1,0 +1,7 @@
+.content-translation {
+    max-width: 89%;
+    gap: 32px;
+}
+.content.content-translation {
+    margin-top: 29px;
+}
