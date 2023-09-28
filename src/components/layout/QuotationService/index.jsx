@@ -4,11 +4,12 @@ import { QuotationServiceText } from '../../../constants'
 
 import './style.css'
 
-const QuotationService = () => {
+const QuotationService = ({titulo}) => {
 
   return (
     <section className='section' id='quotation-section'>
-      <h1>{QuotationServiceText.title}</h1>
+<div>      <h1>{titulo}</h1>
+      <p id='turian'  >                     </p></div>
       <Form texts={QuotationServiceText} />
     </section>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Feedback, Partnerships, QuotationService, SectorsActivity, Translation } from '../../components'
 
-const Main = () => {
+const Main = ({titulo}) => {
   return (
     <>
-    <QuotationService />
+    <QuotationService    titulo={titulo}/>
       <Partnerships />
       <SectorsActivity />
       <Feedback />

@@ -136,7 +136,7 @@ const ArchiveType = ({data, updateFieldHandler, inputs}) => {
           
             <label>{inputs[2]}</label> <br />
             <div className={`select select-btn ${openFirst && 'open'}`} onClick={handleClick}>
-                <span className="btn-text">{languagens[0] || "Selecione uma linguagem"}...</span>
+                <span className="btn-text">{languagens[0] || "Selecione"}...</span>
             </div>
             <ul className="list-items" id='list'>
                 {languages.map((item, index) => (

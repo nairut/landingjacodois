@@ -6,6 +6,10 @@ const MarginTop = "98px";
 
 const Partnerships = () => {
   return (
+
+    
+    // o style desse aqui está no styles global  (pasta global).
+    
     <div id='section-partnership' className='section' style={{marginTop: MarginTop}}>
         <center>
           <h2>{PartnershipsText.title}</h2>

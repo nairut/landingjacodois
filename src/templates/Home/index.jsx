@@ -11,7 +11,17 @@ function Home() {
       <BrowserRouter >
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route path='/' element={<Main
+        titulo="Serviço de Tradução Técnica"
+        />} />
+
+
+<Route path='/financeira' element={<Main
+        titulo="Serviço de Tradução Financeira"
+        />} />
+
+
+
         <Route path='/obrigado' element={<Thanks />} />
         <Route path='/Quotation' element={<Navigate to={'/obrigado'} />} />
         <Route path='/termos' element={<Terms />} />

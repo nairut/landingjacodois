@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 87%;
+    width: 80%;
     background-color: #F2F5F7;
     border: 2px solid #C8982A;
-    border-radius: 91px;
+    border-radius: 50px;
     min-height: 413px;
 }
 
