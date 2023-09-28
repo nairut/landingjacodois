@@ -16,7 +16,7 @@ function Home() {
         />} />
 
 
-<Route path='/financeira' element={<Main
+<Route path='/en/financeira' element={<Main
         titulo="Serviço de Tradução Financeira"
         />} />
 
