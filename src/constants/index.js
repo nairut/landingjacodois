@@ -122,12 +122,12 @@ export const termsText = {
 
 export const typeContent = [
     {value: "", label: "Selecione..."},
-    {value: "type1", label: "tipo1"},
-    {value: "type2", label: "tipo2"},
-    {value: "type3", label: "tipo3"},
-    {value: "type4", label: "tipo4"},
-    {value: "type5", label: "tipo5"},
-    {value: "type6", label: "tipo6"},
+    {value: "type1", label: "Tradução Técnica"},
+    {value: "type2", label: "Tradução Juramentada"},
+    {value: "type3", label: "Tradução Simples"},
+    {value: "type4", label: "Tradução Científica"},
+    {value: "type5", label: "Legendagem"},
+
 ]
 
 export const languages = [
