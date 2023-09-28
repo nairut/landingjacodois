@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { languages, typeContent} from '../../../constants'
 // import { MultiSelect } from 'react-multi-select-component';
 import './style.css'
@@ -12,7 +12,7 @@ const Item = ({name, handleClick}) => {
 
   useEffect(() => {
     handleClick()
-  },[isChecked])
+  },[isChecked, handleClick])
   return (
     <li className={`item ${isChecked ? 'checked' : ''}`} onClick={handleItemClick} >
         <span className="checkbox">
@@ -26,8 +26,7 @@ const Item = ({name, handleClick}) => {
 const ArchiveType = ({data, updateFieldHandler, inputs}) => {
     // const [selected, setSelected] = useState([]);
     const [openFirst, setOpenFirst] = useState(false)
-    const [languagens, setLanguages] = useState()
-    const selectRef = useRef(null)
+    const [languagens, setLanguages] = useState([])
     // const [selectedOrigin, setSelectedOrigin] = useState([]);
     // const [selectedArchiveType, setSelectedArchiveType] = useState([])
 
@@ -79,8 +78,6 @@ const ArchiveType = ({data, updateFieldHandler, inputs}) => {
     //     })
     //   }
     // }
-    // if (selectRef.current && !selectRef.current.contains(e.target)) {
-    // }
     const handleClick = () => {
       setOpenFirst(prev => !prev)
     }
@@ -92,31 +89,9 @@ const ArchiveType = ({data, updateFieldHandler, inputs}) => {
         itens.push(element.textContent)
       });
       updateFieldHandler("translation", itens.join(", "))
-      if (elements.length > 4) {
-        const newLayout = itens.slice(0, 4)
-        setLanguages(`${newLayout.join(", ")}...`)
-      } else {
-
-        setLanguages(itens.join(", "))
-      }
+      setLanguages(itens)
     }
-    useEffect(() => {
-      const handleClickOutside = (e) => {
-        if (selectRef.current && !selectRef.current.contains(e.target)) {
-          setOpenFirst(false);
-        }
-      }
-
-      if (openFirst) {
-        document.addEventListener('click', handleClickOutside)
-      } else {
-        document.removeEventListener('click', handleClickOutside)
-      }
-
-      return () => {
-        document.removeEventListener('click', handleClickOutside)
-      }
-    },[openFirst])
+    
   return (
     <div className='input-steps-content'>
         <div className="input">
@@ -157,11 +132,11 @@ const ArchiveType = ({data, updateFieldHandler, inputs}) => {
 
             </select> */}
         </div>
-        <div className="input" ref={selectRef}>
+        <div className="input">
           
             <label>{inputs[2]}</label> <br />
-            <div  className={`select select-btn ${openFirst && 'open'}`} onClick={handleClick}>
-                <span className="btn-text">{languagens || "Selecione"}</span>
+            <div className={`select select-btn ${openFirst && 'open'}`} onClick={handleClick}>
+                <span className="btn-text">{languagens[0] || "Selecione uma linguagem"}...</span>
             </div>
             <ul className="list-items" id='list'>
                 {languages.map((item, index) => (
