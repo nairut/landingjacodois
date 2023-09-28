@@ -131,7 +131,7 @@ export const typeContent = [
 ]
 
 export const languages = [
-    {value: "", label: "Selecione..."},
+    
     { value: "pt", label: "Português" },
     { value: "en", label: "Inglês" },
     { value: "es", label: "Espanhol" },
