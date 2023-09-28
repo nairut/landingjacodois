@@ -52,7 +52,7 @@ const Archive = ({data, updateFieldHandler}) => {
             <p>Adicione seus arquivos:</p>
             <br />
             <label htmlFor='file'>Adicione seus arquivos <br />
-            Aquivos adicionados: {numArchives} <br />
+            Adicionados: {numArchives} <br />
             </label>
             
             <input ref={input} onDragOver={(e) => e.preventDefault()} type="file" id='file' name='archive1' onDrop={handleDrop} onChange={handleFileChange} multiple/>
