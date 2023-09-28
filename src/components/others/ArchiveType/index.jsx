@@ -10,9 +10,17 @@ const Item = ({name, handleClick}) => {
     setIsChecked(!isChecked);
   };
 
+
+//useEffect(() => {
+ //   handleClick()
+ // },[isChecked])*
+
+
   useEffect(() => {
-    handleClick()
-  },[isChecked])
+    handleClick();
+  }, [isChecked, handleClick]);
+
+
   return (
     <li className={`item ${isChecked ? 'checked' : ''}`} onClick={handleItemClick} >
         <span className="checkbox">
