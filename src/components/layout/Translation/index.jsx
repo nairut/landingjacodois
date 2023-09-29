@@ -4,7 +4,7 @@ import Button from '../../others/Button'
 import TranslationDocument from '../../others/TranslationDocument'
 import './style.css'
 
-const MarginTop = "146px"
+const MarginTop = "80px"
 
 const Translation = () => {
   const handleClick = () => {
@@ -14,8 +14,8 @@ const Translation = () => {
     });
   }
   return (
-    <div className='section' style={{marginTop: MarginTop}}>
-      <div className="section-text">
+    <div className='section'  style={{marginTop: MarginTop}}>
+      <div className="section-text"    id="oquetraduzir">
         <h2>{TranslationText.title}</h2>
         <p className='text-section'>{TranslationText.description}</p> 
       </div>

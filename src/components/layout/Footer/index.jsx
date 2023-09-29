@@ -4,7 +4,7 @@ import { FooterText } from '../../../constants'
 import './style.css'
 import { useNavigate } from 'react-router-dom'
 
-const MarginTop = '77px'
+const MarginTop = '180px'
 
 const Footer = () => {
 
