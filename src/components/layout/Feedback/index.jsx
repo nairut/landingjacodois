@@ -7,8 +7,8 @@ const MarginTop = '107px';
 
 const Feedback = () => {
   return (
-    <div className="section" style={{marginTop: MarginTop}}>
-      <div className="section-text">
+    <div className="section" id="depoimentos" style={{marginTop: MarginTop}}>
+      <div className="section-text"  id="qualidadequedagosto">
         <h2>{FeedbackText.title}</h2>
         <p className='text-section'>{FeedbackText.description}</p>
       </div>
