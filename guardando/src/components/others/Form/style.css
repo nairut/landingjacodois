@@ -1,0 +1,59 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: #F2F5F7;
+    border: 2px solid #C8982A;
+    border-radius: 50px;
+    min-height: 413px;
+}
+
+.form-container .form-content {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 22px;
+}
+
+select {
+    cursor: pointer;
+}
+
+label {
+    font-size: 19px;
+}
+
+.steps,
+.form {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finally {
+    margin-top: 20px;
+}
+
+.vertical-line {
+    border-left: 3px solid black;
+    height: 350px;
+  }
+
+
+.input.file input {
+    padding-top: 8px;
+    display: none;
+}
+
+
+@media screen and (max-width: 870px) {
+    .vertical-line,
+    .steps{
+        display: none;
+    }
+    .form {
+        width: 250px;
+    }
+}

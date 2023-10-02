@@ -1,0 +1,26 @@
+.testimony {
+    width: 79%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+#qualidadequedagosto {
+
+    gap: 20px;
+
+}
+
+
+#depoimentos {
+
+    gap: 80px;
+
+}
+
+
+
+
